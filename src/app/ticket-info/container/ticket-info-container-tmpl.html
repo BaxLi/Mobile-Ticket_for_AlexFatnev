@@ -21,10 +21,20 @@
 
   <div class="row" 
   [hidden]="isVisitCall && !isVisitRecycled" 
-  style="display:flex;justify-content:space-around;">
+  style="display:flex;justify-content:center;">
     <!-- //TODO - reklama row -->
     <!-- <p style="color:white;"> {{reklamaImageImg}}</p> -->
-      <p class="reklama">{{reklamaServiceName}}</p>
+    <div class="reklama">
+      <p >{{reklamaText}}</p>
+    </div>
+      <div>
+        <button 
+          class="accent-btn accent-btn-side custom accent-bg-color btn-text-color"
+          style="width: 100px;">
+          <a href="{{reklamaLink}}" style="color: white;" target="newframe">PUSH</a>
+        </button>
+      </div>
+
   </div>
   <div [hidden]="!isVisitCall" class="row">
     <div class="col-xs-12 col-xxs">

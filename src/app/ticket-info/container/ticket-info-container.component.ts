@@ -49,7 +49,20 @@ export class TicketInfoContainerComponent implements OnInit, OnDestroy {
   public title2: string;
   public isMeetingAvailable: boolean;
   private eventSub: Subscription;
-  public reklamaServiceName:String="--"//"assets/reklama/1.png";
+  public reklamaText: String = "--";
+  public reklamaLink: String = "#";
+  private reklamaTextArray: Object = {
+    Депозит:
+      "А Вы знаете, что открыв Индивидуальный инвестиционный счет можно получить % выше чем по вкладу? Узнайте все подробности у сотрудника или на сайте Банка.",
+    Иное:
+      "Узнайте у сотрудника, как защитить себя и свою семью на случай заболевания covid-19! Информация на сайте Банка:",
+    Consultare: ["Aflati mai multe aici -> ...", `http://google.com`],
+    "Documentare Consultare": "Documentare si Consult",
+    Карты:
+      "Узнайте у сотрудника, действуют ли по интересующей Вас карте сейчас какие-либо акции. ",
+    Кредитыналичными:
+      "Кредит наличными	Хотите оформить кредит? Мы подберем % по кредиту персонально для Вас! Подробности уточняйте у сотрудника.",
+  };
 
   @ViewChild("ticketNumberComponent") ticketNumberComponent;
   @ViewChild("queueComponent") queueComponent;
@@ -99,17 +112,27 @@ export class TicketInfoContainerComponent implements OnInit, OnDestroy {
     */
   }
 
-  reklama(){
-      // console.log("reklama called ", MobileTicketAPI.getSelectedService());
-      this.reklamaServiceName=MobileTicketAPI.getSelectedService().name;
-}
+  reklama() {
+    const tst = this.reklamaTextArray;
+    const currentService = MobileTicketAPI.getSelectedService().name;
+    const msg = Object.keys(tst).indexOf(currentService);
+
+    // console.log("reklama ->keyID", msg, "srv Name=", currentService);
+    // console.log(tst[`${currentService}`]);
+
+    if (msg !== -1) {
+      this.reklamaText = tst[`${currentService}`][0];
+      this.reklamaLink = tst[`${currentService}`][1];
+    }
+
+  }
 
   ngOnInit() {
     this.scrollPageToTop();
     this.loadNotificationSound();
     this.setRtlStyles();
     this.loadTranslations();
-    this.reklama()
+    this.reklama();
   }
 
   loadTranslations() {
