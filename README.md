@@ -1,4 +1,4 @@
-# QMATIC Mobile Ticket
+# QMATIC Mobile Ticket - adopted version for Alexey Fatnev
 Qmatic mobile ticket solution is intended to issue e-tickets to the customers who are willing to go through the queue management solution by QMATIC. 
 This is a web application that has been developed using Angular4 and the development environment of the project uses Angular-cli tools 
 (https://github.com/angular/angular-cli).
