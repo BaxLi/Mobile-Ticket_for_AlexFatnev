@@ -43,8 +43,8 @@
   color: black;
   height: calc(14vw + 8px) !important;
   width: calc(88vw + 8px) !important;
-  max-height: 64px;
-  max-width: 356px;
+  max-height: 80px;
+  max-width: 275px; /* TODO - change in case of diff number of SERVICES per surface */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

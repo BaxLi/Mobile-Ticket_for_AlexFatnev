@@ -8,3 +8,10 @@ NO rtl styles for this component
     float: right;
   }
 }*/
+.reklama{
+  min-width: 60px;
+  min-height: 50px;
+  max-width:100;
+  max-height:400;
+  background: #ccc;
+}

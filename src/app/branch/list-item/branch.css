@@ -41,6 +41,8 @@
   height: calc(14vw + 8px) !important;
   max-height: 64px;
   max-width: 356px;
+  /* width:180px;
+  height: 180px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
