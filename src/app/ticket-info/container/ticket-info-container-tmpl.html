@@ -18,23 +18,23 @@
                          (onUrlVisitLoading)='onUrlVisitLoading($event)'
                          (onVisitStatusUpdate)='onVisitStatusUpdate($event)'></app-queue-container>
   </div>
-
+<div class="row" style="height:5px;">
+</div>
   <div class="row" 
-  [hidden]="isVisitCall && !isVisitRecycled" 
-  style="display:flex;justify-content:center;">
-    <!-- //TODO - reklama row -->
-    <!-- <p style="color:white;"> {{reklamaImageImg}}</p> -->
-    <div class="reklama">
-      <p >{{reklamaText}}</p>
-    </div>
-      <div>
-        <button 
-          class="accent-btn accent-btn-side custom accent-bg-color btn-text-color"
-          style="width: 100px;">
-          <a href="{{reklamaLink}}" style="color: white;" target="newframe">PUSH</a>
-        </button>
-      </div>
+    [hidden]="isVisitCall && !isVisitRecycled" 
+    style="display:flex;justify-content:center;"
+    >
+      <div 
+          class="reklama-text"
+          style="width:95%;               
+          border:3px dashed rgb(216, 73, 73, 0.75);"
+        >
+            <a  href="{{reklamaLink}}" 
+                style="color:white;" target="newframe">
+            {{reklamaText}}
+          </a>
 
+      </div>
   </div>
   <div [hidden]="!isVisitCall" class="row">
     <div class="col-xs-12 col-xxs">

@@ -2,6 +2,16 @@
   background: transparent;
 }
 
+.reklama-text {
+  color: white;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-family: Roboto-Light;
+  padding-bottom: 4px;
+  text-align: center;
+  text-decoration: underline;
+}
+
 .app-visit-cancel {
   position: absolute;
   width: 100%;

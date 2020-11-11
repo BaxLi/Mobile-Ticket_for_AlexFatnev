@@ -1,10 +1,11 @@
 {
   "name": "mobile-ticket",
-  "version": "1.9.1",
+  "version": "1.9.7",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve --proxy-config proxy.config.json",
+    "prebuild": "npm --no-git-tag-version version patch",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",

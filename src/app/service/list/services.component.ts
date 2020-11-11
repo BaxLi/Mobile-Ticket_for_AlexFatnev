@@ -50,6 +50,9 @@ export class ServicesComponent implements AfterViewInit {
   }
 
   private onServicesReceived(serviceList, serviceService): void {
+    // TODO - obtained service list here 
+  console.log("ServicesComponent -> onServicesReceived -> serviceList", serviceList)
+    
     this.onShowHideServiceFetchError.emit(false);
     if (serviceList.length === 1) {
       this.onServiceSelection.emit(serviceList[0].id);

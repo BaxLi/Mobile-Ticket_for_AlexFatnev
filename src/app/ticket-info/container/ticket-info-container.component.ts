@@ -52,16 +52,26 @@ export class TicketInfoContainerComponent implements OnInit, OnDestroy {
   public reklamaText: String = "--";
   public reklamaLink: String = "#";
   private reklamaTextArray: Object = {
-    Депозит:
-      "А Вы знаете, что открыв Индивидуальный инвестиционный счет можно получить % выше чем по вкладу? Узнайте все подробности у сотрудника или на сайте Банка.",
-    Иное:
-      "Узнайте у сотрудника, как защитить себя и свою семью на случай заболевания covid-19! Информация на сайте Банка:",
-    Consultare: ["Aflati mai multe aici -> ...", `http://google.com`],
-    "Documentare Consultare": "Documentare si Consult",
-    Карты:
+    "2) Депозит": [
+      "А Вы знаете, что открыв Индивидуальный инвестиционный счет можно получить % выше чем по вкладу? Узнайте все подробности у сотрудника или на сайте Банка: ссылка.",
+      `https://www.homecredit.ru/deposits/iis/`,
+    ],
+    "4) Иное": [
+      "Узнайте у сотрудника, как защитить себя и свою семью на случай заболевания covid-19! Информация на сайте банка: ссылка.",
+      `https://www.homecredit.ru/services/insurance/products/coronavirus/`,
+    ],
+    "3) Карты": [
+      "Узнайте у сотрудника, действуют ли по интересующей Вас карте сейчас какие-либо акции.",
+      `https://www.homecredit.ru/about/promo/bank/`,
+    ],
+    "1) Кредит наличными": [
+      "Хотите оформить кредит? Мы подберем % по кредиту персонально для Вас! Подробности уточняйте у сотрудника.",
+      `https://www.homecredit.ru/loans/`,
+    ],
+    Consultare: [
       "Узнайте у сотрудника, действуют ли по интересующей Вас карте сейчас какие-либо акции. ",
-    Кредитыналичными:
-      "Кредит наличными	Хотите оформить кредит? Мы подберем % по кредиту персонально для Вас! Подробности уточняйте у сотрудника.",
+      `https://www.homecredit.ru/about/promo/bank/`,
+    ],
   };
 
   @ViewChild("ticketNumberComponent") ticketNumberComponent;
@@ -117,14 +127,10 @@ export class TicketInfoContainerComponent implements OnInit, OnDestroy {
     const currentService = MobileTicketAPI.getSelectedService().name;
     const msg = Object.keys(tst).indexOf(currentService);
 
-    // console.log("reklama ->keyID", msg, "srv Name=", currentService);
-    // console.log(tst[`${currentService}`]);
-
     if (msg !== -1) {
       this.reklamaText = tst[`${currentService}`][0];
       this.reklamaLink = tst[`${currentService}`][1];
     }
-
   }
 
   ngOnInit() {
