@@ -130,7 +130,10 @@ export class TicketInfoContainerComponent implements OnInit, OnDestroy {
     if (msg !== -1) {
       this.reklamaText = tst[`${currentService}`][0];
       this.reklamaLink = tst[`${currentService}`][1];
-    }
+      return
+    } 
+    this.reklamaText=`О нас`
+    this.reklamaLink = `https://www.homecredit.ru/`;
   }
 
   ngOnInit() {
