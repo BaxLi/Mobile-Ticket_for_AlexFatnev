@@ -52,23 +52,11 @@ export class TicketInfoContainerComponent implements OnInit, OnDestroy {
   public reklamaText: String = "--";
   public reklamaLink: String = "#";
   private reklamaTextArray: Object = {
-    "2) Депозит": [
-      "А Вы знаете, что открыв Индивидуальный инвестиционный счет можно получить % выше чем по вкладу? Узнайте все подробности у сотрудника или на сайте Банка: ссылка.",
-      `https://www.homecredit.ru/deposits/iis/`,
-    ],
     "4) Иное": [
       "Узнайте у сотрудника, как защитить себя и свою семью на случай заболевания covid-19! Информация на сайте банка: ссылка.",
       `https://www.homecredit.ru/services/insurance/products/coronavirus/`,
     ],
-    "3) Карты": [
-      "Узнайте у сотрудника, действуют ли по интересующей Вас карте сейчас какие-либо акции.",
-      `https://www.homecredit.ru/about/promo/bank/`,
-    ],
-    "1) Кредит наличными": [
-      "Хотите оформить кредит? Мы подберем % по кредиту персонально для Вас! Подробности уточняйте у сотрудника.",
-      `https://www.homecredit.ru/loans/`,
-    ],
-    Consultare: [
+    ConsultareTOT: [
       "Узнайте у сотрудника, действуют ли по интересующей Вас карте сейчас какие-либо акции. ",
       `https://www.homecredit.ru/about/promo/bank/`,
     ],
@@ -132,8 +120,8 @@ export class TicketInfoContainerComponent implements OnInit, OnDestroy {
       this.reklamaLink = tst[`${currentService}`][1];
       return
     } 
-    this.reklamaText=`О нас`
-    this.reklamaLink = `https://www.homecredit.ru/`;
+    this.reklamaText=`Despre noi - aici`
+    this.reklamaLink = `http://asp.gov.md//`;
   }
 
   ngOnInit() {
